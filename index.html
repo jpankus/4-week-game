@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Crystal Collector Game!</title>
-
+	<title>Crystal Guess Game</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-	<script src="assets/javascript/game.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 
 </head>
-
 <body>
-
-<div class="container">
-
+<div class="wrapper" align="center">
+<div class="jumbotron">
 	<div class="row">
 		<div class="col-md-12 text-center">
-			<h1>Crystal Collector Game!</h1>
-			<h3 class="dropdown">How Do You Play?</h3>
-			<div class="instructions col-md-8 col-md-offset-2">
-				<p>You're given a random number at the start of the game. Your goal is to click on the gems and get your total score to match this number.</p>
-				<p>Clicking on a gem will add a set amount of points to your total score.</p>
-				<p>The value of each gem is hidden from you until you click on it.</p>
-				<p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
-				<p>Each time the game starts, the gems will get a new random value.</p>
-			</div>
-		</div>
-	</div>
-	<br><br>
-
-	<div class="row">
-
-		<div class="col-md-6 text-center">
-			<div class="col-md-12">
-				<h2>Match This Number: <span class="numberdisplay"></h2>
-			</div>
-			<div class="col-md-12">
-				<h2>Your Current Number: <span class="guessdisplay">0</span></h2>
-			</div>
-
-			<div class="col-md-12">
-			<br>
-			<br>
-				<div class="col-md-2 col-md-offset-2">
-					<img class="bluegem" src="images/blue.png">
-				</div>
-				<div class="col-md-2">
-					<img class="redgem" src="images/red.png">
-				</div>
-				<div class="col-md-2">
-					<img class="yellowgem" src="images/yellow.png">
-				</div>
-				<div class="col-md-2">
-					<img class="greengem" src="images/green.png">
-				</div>
-			</div>
-
-		</div>
-
-		<div class="col-md-6">
-			<div class="col-md-12 text-center stats">
-				<h2 class="underline">Stats</h2>
-				<p>Wins: <span id="winsdisplay">0</span></p>
-				<p>Losses: <span id="lossesdisplay">0</span></p>
+			<h1>Crystal Guess Game</h1>
+			<h2>How To Play</h2>
+			<div class="instructions">
+			<p> You will be given a random number at the start of the game.
+			There are four crystals below. <br>By clicking on a crystal you will add a specific amount of points to your total score. <br>You win the game by matching your total score to the random number. <br>You lose the game if your total score goes above the random number.<br>
+			Each time the game starts, the game will change the values of each crystal.</p>
 			</div>
 		</div>
 	</div>
 </div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="col-md-6" id="guessingNumber">Match This Numer: <span class="value"></span></h2> 	
+		
+
+		<div class="col-md-6" id="scoreboard">
+			<h3><span id="status"></span></h3>
+			<h3>Wins: <span id="win"></span></h3>
+			<h3>Losses: <span id="loss"></span> </h3>
+		</div>
+	</div>
+	</div>
+
+	
+	<div class="col-md-12" id="crystals"></div>
+
+	<div class="col-md-6" id ="totalScore">
+		<h2 id ="yourTotalScore">Your Guess: <span id ="yourScore">0</span></h2>
+		
+	</div>
+
+</div>
+
+
+<!-- jquery -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 
 </body>
